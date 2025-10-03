@@ -3,30 +3,48 @@ package stacks
 import (
 	"github.com/aws/aws-cdk-go/awscdk/v2"
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/aws/jsii-runtime-go"
-	"github.com/aws/aws-cdk-go/awscdk/v2/awssqs"
+
+	"helloworld-cdk/config"
+	"helloworld-cdk/resources"
 )
 
-type HelloworldCdkStackProps struct {
+type HelloWorldStackProps struct {
 	awscdk.StackProps
 }
 
-func NewHelloworldCdkStack(scope constructs.Construct, id string, props *HelloworldCdkStackProps) awscdk.Stack {
+func NewHelloWorldStack(scope constructs.Construct, id string, props *HelloWorldStackProps) awscdk.Stack {
 	var sprops awscdk.StackProps
 	if props != nil {
 		sprops = props.StackProps
 	}
 	stack := awscdk.NewStack(scope, &id, &sprops)
 
-	// The code that defines your stack goes here
+	config.Tags(stack.Tags())
+	cfg := config.Config()
 
-	// example resource
-	queue := awssqs.NewQueue(stack, jsii.String("HelloworldCdkQueue.fifo"), &awssqs.QueueProps{
-		VisibilityTimeout:         awscdk.Duration_Seconds(jsii.Number(300)),
-		Fifo:                      jsii.Bool(true),
-		ContentBasedDeduplication: jsii.Bool(true),
+	resources.ApiGateway(stack, resources.ApiGatewayParams{
+		NamePrefix: cfg.NamePrefix,
+		Routes: []resources.Route{
+			{
+				Path: "python", Method: "GET",
+				LambdaFunction: resources.HelloWorldPythonLambda(
+					stack, resources.LambdaParams{NamePrefix: cfg.NamePrefix},
+				),
+			},
+			{
+				Path: "golang", Method: "GET",
+				LambdaFunction: resources.HelloWorldGoLambda(
+					stack, resources.LambdaParams{NamePrefix: cfg.NamePrefix},
+				),
+			},
+			{
+				Path: "nodejs", Method: "GET",
+				LambdaFunction: resources.HelloWorldNodeJSLambda(
+					stack, resources.LambdaParams{NamePrefix: cfg.NamePrefix},
+				),
+			},
+		},
 	})
-	_ = queue
 
 	return stack
 }

@@ -13,13 +13,7 @@ func main() {
 
 	app := awscdk.NewApp(nil)
 
-	stacks.NewHelloworldCdkStack(app, "HelloworldCdkStack", &stacks.HelloworldCdkStackProps{
-		StackProps: awscdk.StackProps{
-			Env: config.Env(),
-		},
-	})
-
-	stacks.NewAnotherCdkStack(app, "AnotherCdkStack", &stacks.AnotherCdkStackProps{
+	stacks.NewHelloWorldStack(app, "HelloworldCdkStack", &stacks.HelloWorldStackProps{
 		StackProps: awscdk.StackProps{
 			Env: config.Env(),
 		},

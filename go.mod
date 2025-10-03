@@ -3,13 +3,22 @@ module helloworld-cdk
 go 1.23.0
 
 require (
-	github.com/aws/aws-cdk-go/awscdk/v2 v2.215.0
+	github.com/aws/aws-cdk-go/awscdk/v2 v2.219.0
 	github.com/aws/constructs-go/constructs/v10 v10.4.2
 	github.com/aws/jsii-runtime-go v1.113.0
+	github.com/stretchr/testify v1.10.0
+)
+
+require (
+	github.com/aws/aws-cdk-go/awscdklambdagoalpha/v2 v2.219.0-alpha.0
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
 require (
 	github.com/Masterminds/semver/v3 v3.4.0 // indirect
+	github.com/aws/aws-lambda-go v1.49.0
 	github.com/cdklabs/awscdk-asset-awscli-go/awscliv1/v2 v2.2.242 // indirect
 	github.com/cdklabs/awscdk-asset-node-proxy-agent-go/nodeproxyagentv6/v2 v2.1.0 // indirect
 	github.com/cdklabs/cloud-assembly-schema-go/awscdkcloudassemblyschema/v48 v48.6.0 // indirect

@@ -1,7 +1,11 @@
 github.com/Masterminds/semver/v3 v3.4.0 h1:Zog+i5UMtVoCU8oKka5P7i9q9HgrJeGzI9SA1Xbatp0=
 github.com/Masterminds/semver/v3 v3.4.0/go.mod h1:4V+yj/TJE1HU9XfppCwVMZq3I84lprf4nC11bSS5beM=
-github.com/aws/aws-cdk-go/awscdk/v2 v2.215.0 h1:6EuloIi8sz63YHjct8KRNriy362a+Eorm06ktWnM/Cs=
-github.com/aws/aws-cdk-go/awscdk/v2 v2.215.0/go.mod h1:MzAbeaZ2ikHSDYMTbf/KerTp4iuO6uXvEm9k/vSCE3U=
+github.com/aws/aws-cdk-go/awscdk/v2 v2.219.0 h1:2ALdFI4kdAVSOeLOBbsAoPMdEdH32MS7SUiNyiYkDEU=
+github.com/aws/aws-cdk-go/awscdk/v2 v2.219.0/go.mod h1:MzAbeaZ2ikHSDYMTbf/KerTp4iuO6uXvEm9k/vSCE3U=
+github.com/aws/aws-cdk-go/awscdklambdagoalpha/v2 v2.219.0-alpha.0 h1:hZIgdg73cdvJd8inPJSk3oltR8eL7vjKs/VPTkZ9gxs=
+github.com/aws/aws-cdk-go/awscdklambdagoalpha/v2 v2.219.0-alpha.0/go.mod h1:5vB1rm5F7cmEr0q/UpiTW6zxbY+ZLFvPHAujBpr/S7Q=
+github.com/aws/aws-lambda-go v1.49.0 h1:z4VhTqkFZPM3xpEtTqWqRqsRH4TZBMJqTkRiBPYLqIQ=
+github.com/aws/aws-lambda-go v1.49.0/go.mod h1:dpMpZgvWx5vuQJfBt0zqBha60q7Dd7RfgJv23DymV8A=
 github.com/aws/constructs-go/constructs/v10 v10.4.2 h1:+hDLTsFGLJmKIn0Dg20vWpKBrVnFrEWYgTEY5UiTEG8=
 github.com/aws/constructs-go/constructs/v10 v10.4.2/go.mod h1:cXsNCKDV+9eR9zYYfwy6QuE4uPFp6jsq6TtH1MwBx9w=
 github.com/aws/jsii-runtime-go v1.113.0 h1:3vJsPVgpQHYTHglndkS26X60wrybc9jgsvU14s7IGGw=
@@ -52,5 +56,7 @@ golang.org/x/tools v0.0.0-20200130002326-2f3ba24bd6e7/go.mod h1:TB2adYChydJhpapK
 golang.org/x/tools v0.35.0 h1:mBffYraMEf7aa0sB+NuKnuCy8qI/9Bughn8dC2Gu5r0=
 golang.org/x/tools v0.35.0/go.mod h1:NKdj5HkL/73byiZSJjqJgKn3ep7KjFkBOkR/Hps3VPw=
 golang.org/x/xerrors v0.0.0-20191011141410-1b5146add898/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
 gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
